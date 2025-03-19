@@ -22,7 +22,7 @@
 //  Driver Configuration for NVIDIA Jetson Nano 4GB/2GB on NVIDIA Jetson Nano Developer Kit
 // ------------------------------------------------------------------------------------------------
 #define VC_MIPI_CAM_0       1   // 1: Enabled, 0: Disabled  (serial_a => CSI Port 0 => VI Stream 0)
-#define VC_MIPI_CAM_1       1   // 1: Enabled, 0: Disabled  (serial_b => CSI Port 1 => VI Stream 2)
+#define VC_MIPI_CAM_1       0   // 1: Enabled, 0: Disabled  (serial_e => CSI Port 4 => VI Stream 4)
 // ------------------------------------------------------------------------------------------------
 //  Supported number of lanes
 // -----+------------------------------------------------------------------------------------------
@@ -91,16 +91,6 @@
                         port-index = <4>;
                         bus-width = <BUS_WIDTH>;
                         remote-endpoint = <&vc_csi_out1>;
-                    };
-                };
-#endif
-#if VC_MIPI_CAM_2 == 1
-                vc_vi_port1: port@2 {
-                    reg = <1>;
-                    vc_vi_in2: endpoint {
-                        port-index = <4>;
-                        bus-width = <BUS_WIDTH>;
-                        remote-endpoint = <&vc_csi_out2>;
                     };
                 };
 #endif
