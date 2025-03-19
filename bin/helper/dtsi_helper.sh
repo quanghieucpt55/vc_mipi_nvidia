@@ -20,7 +20,7 @@ function extract_and_set_key_from_config {
         fi
 
         if [[ "$VC_MIPI_BOARD" =~ ^"NV_DevKit" ]] 
-        thenD
+        then
                 DTSI_KEY=$VC_MIPI_BOARD
         else
                 part_str_board=$VC_MIPI_BOARD

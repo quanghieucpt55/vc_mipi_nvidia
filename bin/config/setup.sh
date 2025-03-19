@@ -199,8 +199,8 @@ check_configuration() {
 write_configuration() {
         mkdir -p $BUILD_DIR
         cd $BUILD_DIR
-        echo "export VC_MIPI_SOM=${som}"     >  $CONFIGURATION_FILE //ghi đè
-        echo "export VC_MIPI_BOARD=${board}" >> $CONFIGURATION_FILE  //ghi thêm
+        echo "export VC_MIPI_SOM=${som}"     >  $CONFIGURATION_FILE
+        echo "export VC_MIPI_BOARD=${board}" >> $CONFIGURATION_FILE 
         echo "export VC_MIPI_BSP=${bsp}"     >> $CONFIGURATION_FILE
 }
 
